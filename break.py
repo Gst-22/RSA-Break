@@ -1,14 +1,11 @@
 import math
 
-def gcdExtended_rec(a, b): #Quibado da net
-    # Base Case 
+def gcdExtended_rec(a, b):
     if a == 0 : 
         return b,0,1
              
     gcd,x1,y1 = gcdExtended_rec(b%a, a) 
      
-    # Update x and y using results of recursive 
-    # call 
     x = y1 - (b//a) * x1 
     y = x1 
      
@@ -34,7 +31,6 @@ def phi(n):
     print("p:", p, "q:", q)
     return (p - 1) * (q - 1)
 
-
 def rsa_encrypt_decrypt(input_file, output_file, key, n):
     with open(input_file, 'rb') as f:
         data = f.read()
@@ -54,6 +50,20 @@ d = gdcExtended(int(e), n_phi)
 
 print("d is", d)
 
-aberto = open("textoClaro.txt", "rb")
-
+# texto_claro = input("Enter the input file: ")
+# claro = open(texto_claro, "rb")
+# cifrado = open("encriptado", "wb+")
+# decifrado = open("decriptado", "wb+")
+# 
+# while True:
+#     
+#     byte = int.from_bytes(claro.read(1), byteorder='big', signed=False)
+#     if not byte:
+#         break
+# 
+#     c_byte = pow(byte, int(e), int(n))
+#     cifrado.write(c_byte.to_bytes(1, byteorder='big', signed=False))
+#     
+#     d_byte = pow(c_byte, int(d), int(n))
+#     decifrado.write(d_byte.to_bytes(1, byteorder='big', signed=False))
 
