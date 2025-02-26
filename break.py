@@ -50,20 +50,3 @@ d = gdcExtended(int(e), n_phi)
 
 print("d is", d)
 
-# texto_claro = input("Enter the input file: ")
-# claro = open(texto_claro, "rb")
-# cifrado = open("encriptado", "wb+")
-# decifrado = open("decriptado", "wb+")
-# 
-# while True:
-#     
-#     byte = int.from_bytes(claro.read(1), byteorder='big', signed=False)
-#     if not byte:
-#         break
-# 
-#     c_byte = pow(byte, int(e), int(n))
-#     cifrado.write(c_byte.to_bytes(1, byteorder='big', signed=False))
-#     
-#     d_byte = pow(c_byte, int(d), int(n))
-#     decifrado.write(d_byte.to_bytes(1, byteorder='big', signed=False))
-
